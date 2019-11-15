@@ -3,8 +3,8 @@ IMAGE_NAME='robot-docker'
 CONTAINER_NAME='robot-docker-container'
 
 docker build -t $IMAGE_NAME .
-build=$!
-wait $build
+#build=$!
+#wait $build
 #docker run -d --name $CONTAINER_NAME --shm-size=1gb $IMAGE_NAME:latest
-volume=$!
-wait $volume
+#volume=$!
+#wait $volume
