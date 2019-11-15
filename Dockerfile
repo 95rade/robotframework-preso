@@ -26,7 +26,7 @@ RUN mkdir -p /robot \
     && chown -R jenkins:jenkins /robot
 # Run Chrome as non-privileged
 USER jenkins
-WORKDIR /robot
+#WORKDIR /robot
 
 ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/
