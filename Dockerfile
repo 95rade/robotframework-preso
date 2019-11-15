@@ -20,6 +20,7 @@ RUN apk update && apk upgrade \
 # Run Chrome as non-privileged
 #USER chrome
 
+WORKDIR /robot
 # Add Jenkins as a user
 RUN mkdir -p /robot \
     && adduser -D jenkins \
