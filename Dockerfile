@@ -14,15 +14,16 @@ RUN apk update && apk upgrade \
     /tmp/*
 
 # Add Chrome as a user
-RUN mkdir -p /robot \
-    && adduser -D chrome \
-    && chown -R chrome:chrome /robot
+#RUN mkdir -p /robot \
+#    && adduser -D chrome \
+#    && chown -R chrome:chrome /robot
 # Run Chrome as non-privileged
-USER chrome
+#USER chrome
 
 # Add Jenkins as a user
-RUN adduser -D jenkins \
-    && chown -R jenkins:jenkins /robot
+RUN mkdir -p /robot \
+    && adduser -D jenkins \
+    && chown -R jenkins:jenkins /robot/*.*
 # Run Chrome as non-privileged
 USER jenkins
 WORKDIR /robot
