@@ -21,12 +21,12 @@ RUN apk update && apk upgrade \
 #USER chrome
 
 # Add Jenkins as a user
-RUN mkdir -p /robot \
-    && adduser -D jenkins \
-    && chown -R jenkins:jenkins /robot
+#RUN mkdir -p /robot \
+#    && adduser -D jenkins \
+#    && chown -R jenkins:jenkins /robot
 # Run Chrome as non-privileged
-USER jenkins
-WORKDIR /robot
+#USER jenkins
+#WORKDIR /robot
 
 ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/
