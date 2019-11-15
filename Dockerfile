@@ -29,6 +29,6 @@ RUN apk update && apk upgrade \
 #WORKDIR /robot
 
 #ENV CHROME_BIN=/usr/bin/chromium-browser \
-    CHROME_PATH=/usr/lib/chromium/
+#    CHROME_PATH=/usr/lib/chromium/
     
 CMD ["/scripts/run_suite.sh"]
