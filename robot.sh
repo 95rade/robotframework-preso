@@ -11,6 +11,7 @@ TEST_PATH=$(pwd)
 # If you want time stamped output result files add:  --timestampoutputs 
 # Default behavior is to overwrite the results each test
 
-docker run -it --security-opt seccomp=$(pwd)/chrome.json --shm-size=1gb  -v $TEST_PATH:/robot $IMAGE_NAME:latest robot --outputdir results/ $@ .
+# no -t in Jenkins TTY
+docker run -i --security-opt seccomp=$(pwd)/chrome.json --shm-size=1gb  -v $TEST_PATH:/robot $IMAGE_NAME:latest robot --outputdir results/ $@ .
 RESULT=$?
 exit $RESULT
