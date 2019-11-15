@@ -20,16 +20,15 @@ RUN apk update && apk upgrade \
 # Run Chrome as non-privileged
 #USER chrome
 
-WORKDIR /robot
 # Add Jenkins as a user
-RUN mkdir -p /robot \
-    && adduser -D jenkins \
-    && chown -R jenkins:jenkins /robot
+#RUN mkdir -p /robot \
+#    && adduser -D jenkins \
+#    && chown -R jenkins:jenkins /robot
 # Run Chrome as non-privileged
-USER jenkins
+#USER jenkins
 #WORKDIR /robot
 
-ENV CHROME_BIN=/usr/bin/chromium-browser \
+#ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/
     
 CMD ["/scripts/run_suite.sh"]
