@@ -23,7 +23,7 @@ RUN apk update && apk upgrade \
 # Add Jenkins as a user
 RUN mkdir -p /robot \
     && adduser -D jenkins \
-    && chown -R jenkins:jenkins /robot/*.*
+    && chown -R jenkins:jenkins /robot/*
 # Run Chrome as non-privileged
 USER jenkins
 WORKDIR /robot
