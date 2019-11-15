@@ -32,4 +32,4 @@ USER jenkins
 ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/
     
-CMD ["robot", "/robot/tests/view_ui_tests_docker.robot"]
+CMD ["/scripts/run_suite.sh"]
