@@ -13,6 +13,6 @@ TEST_PATH=$(pwd)
 
 # no -t in Jenkins TTY
 #docker run -it --security-opt seccomp=$(pwd)/chrome.json --shm-size=1gb  -v $TEST_PATH:/robot $IMAGE_NAME:latest robot --outputdir results/ $@ .
-docker run -i --security-opt seccomp=$(pwd)/chrome.json --shm-size=1gb  -v $TEST_PATH:/robot $IMAGE_NAME:latest robot $@ .
+docker run --rm -i -v $TEST_PATH:/robot $IMAGE_NAME:latest robot $@ .
 RESULT=$?
 exit $RESULT
